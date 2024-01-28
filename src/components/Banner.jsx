@@ -1,12 +1,7 @@
 import React from 'react'
-import EventList from './EventList'
 function Banner() {
   return (
-    <div>
-    <div className='w-full h-full '>
-        
-
-<div id="controls-carousel" class="relative w-full" data-carousel="static">
+        <div id="controls-carousel" class="relative w-full" data-carousel="static">
 
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96 mt-[38px]">
 
@@ -48,14 +43,8 @@ function Banner() {
         </span>
     </button>
 </div>
-    <div className="my-10">
-        <h2 class="text-3xl font-medium dark:text-white py-4">Ongoing Events</h2>
-        <EventList />
-    </div>
 
-    </div>
 
-    </div>
   )
 }
 

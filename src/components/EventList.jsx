@@ -1,50 +1,45 @@
 import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
+import eventData from './Data';
 
-const EventCard = ({ imageUrl, title, genre }) => (
-  <div className="flex-shrink-0 mx-4">
-    <div className="w-[280px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img className="rounded-lg object-cover h-96 w-full" src={imageUrl} alt="" />
-      </a>
-    </div>
-    <p className='text-2xl text-black font-medium mt-4'>{title}</p>
-    <p className='text-xl text-gray-700 font-medium'>{genre}</p>
-  </div>
-);
+function EventList() {
+  const isMobile = useMediaQuery({ maxWidth: 600 });
 
-const EventList = () => {
-  // Dummy data for 5 events
-  const eventData = [
-    
-    {
-      imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/science-fair-poster-design-template-dd39cad6b695741a0354db956c385327_screen.jpg?ts=1637002483",
-      title: "Sci-Fi Expo",
-      genre: "Science Fiction"
-    },
-    {
-      imageUrl: "https://marketplace.canva.com/EAFA7W1PLwk/1/0/1131w/canva-cozy-and-homey-japanese-local-food-festival-poster-0pLZ-6Wlnnw.jpg",
-      title: "Food Festival",
-      genre: "Culinary"
-    },
-    {
-      imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/dance-party-template-design-6a3dc0903dc08b51be734750684668ad_screen.jpg?ts=1641265172",
-      title: "Dance Party",
-      genre: "Music/Dance"
-    },
-    {
-      imageUrl: "https://images.template.net/66817/Business-Conference-Rollup-Banner-Template.jpeg",
-      title: "Tech Conference",
-      genre: "Technology"
-    },
-  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToScroll: 1,
+    slidesToShow: isMobile ? 1 : 4,
+  };
 
   return (
-    <div className="flex">
-      {eventData.map((event, index) => (
-        <EventCard key={index} {...event} />
-      ))}
+    <div className='my-10 w-full'>
+      <h2 className='text-3xl font-medium dark:text-white py-4'>Ongoing Events</h2>
+      <div className='mt-20'>
+        <Slider {...settings}>
+          {eventData.map((d) => (
+            <div key={d.title} className='bg-white h-[450px] text-black rounded-xl'>
+              <div className='h-full bg-indigo-500 flex justify-center items-center rounded-xl mr-4'>
+                <img src={d.img} alt='' className='h-full w-full rounded-xl' />
+              </div>
+              <div className='py-4'>
+                <h3 className='text-xl font-semibold mb-2'>{d.title}</h3>
+                <h4 className='text-lg font-regular mb-2 text-gray-500'>{d.genre}</h4>
+                <Link to={`/event/${d.title}`} className='mt-4 bg-gray-100 text-gray-500 px-2 py-1 rounded-md text-sm'>
+                  View Details
+                </Link>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
-};
+}
 
 export default EventList;
