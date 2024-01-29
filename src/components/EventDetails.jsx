@@ -34,8 +34,10 @@ function EventDetails() {
           
           {/* Additional Details */}
           <div className="mt-2 text-lg lg:text-xl font-semibold">
-          {`${event.length} • ${event.genre} • ${event.date}`}
+          {`${event.length} • ${event.genre} • ${event.date} • ${event.time} • ${event.timeZone}`}
           </div>
+          <h1 className='my-4 text-4xl font-semibold'>{`${event.price}`}</h1>
+          <p>{`📍 ${event.location}`}</p>
           
           <div className="flex justify-center mt-6">
             <button

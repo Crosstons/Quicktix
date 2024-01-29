@@ -5,6 +5,7 @@ import Stream from './pages/Stream';
 import Sports from './pages/Sports';
 import EventDetails from './components/EventDetails';
 import Navbar from './components/Navbar';
+import CreateEventForm from './components/CreateEventForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/event/:title" element={<EventDetails />} />
           <Route path="/stream" element={<Stream />} />
           <Route path="/sports" element={<Sports />} />
+          <Route path="/create-event" element={<CreateEventForm/>} />
         </Routes>
         <Navbar />
       </div>

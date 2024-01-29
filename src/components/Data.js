@@ -6,6 +6,10 @@ const eventData = [
       length: '2 hours',
       genre: 'Drama',
       date: '2022-04-15',
+      time: '7:00 PM',
+      timeZone: 'EST',
+      price: '$20.00',
+      location: 'Theater A, XYZ Cinema',
     },
     {
       title: 'Ellie Anderson',
@@ -14,6 +18,10 @@ const eventData = [
       length: '1 hour 45 minutes',
       genre: 'Comedy',
       date: '2022-05-03',
+      time: '6:30 PM',
+      timeZone: 'PST',
+      price: '$15.00',
+      location: 'Comedy Central Hall',
     },
     {
       title: 'Nia Adebayo',
@@ -22,6 +30,10 @@ const eventData = [
       length: '2 hours 30 minutes',
       genre: 'Action',
       date: '2022-05-20',
+      time: '8:15 PM',
+      timeZone: 'CST',
+      price: '$25.00',
+      location: 'Action Arena, XYZ Theater',
     },
     {
       title: 'Rigo Louie',
@@ -30,6 +42,10 @@ const eventData = [
       length: '1 hour 55 minutes',
       genre: 'Thriller',
       date: '2022-06-10',
+      time: '7:45 PM',
+      timeZone: 'EST',
+      price: '$18.00',
+      location: 'Thrill Town Hall',
     },
     {
       title: 'Mia Williams',
@@ -38,6 +54,10 @@ const eventData = [
       length: '2 hours 15 minutes',
       genre: 'Sci-Fi',
       date: '2022-06-25',
+      time: '8:30 PM',
+      timeZone: 'PST',
+      price: '$22.00',
+      location: 'Sci-Fi Convention Center',
     },
   ];
   
