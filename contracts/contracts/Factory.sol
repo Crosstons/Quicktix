@@ -7,7 +7,7 @@ contract Factory {
 
     mapping(address => address[]) public events;
 
-    function createEvent(QuickTixEvent.Event memory eventParams) external {
+    function createEvent(QuickTixEvent.Event memory eventParams) public {
         QuickTixEvent newEvent = new QuickTixEvent(eventParams);
 
         events[msg.sender].push(address(newEvent));
@@ -15,7 +15,7 @@ contract Factory {
         emit EventCreated(msg.sender, address(newEvent));
     }
 
-    function getEventCreator(address creator) external view returns (address[] memory) {
+    function getEventCreator(address creator) public view returns (address[] memory) {
         return events[creator];
     }
 }
