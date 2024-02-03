@@ -4,9 +4,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
-import eventData from './Data';
+import sportsEventData from './Data2';
 
-function EventList() {
+function EventList2() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   const settings = {
@@ -19,10 +19,10 @@ function EventList() {
 
   return (
     <div className='my-10 w-full'>
-      <h2 className='text-3xl font-medium dark:text-white py-4'>Ongoing Events</h2>
+      <h2 className='text-3xl font-medium dark:text-white py-4'>Sports</h2>
       <div className='mt-10'>
         <Slider {...settings}>
-          {eventData.map((d) => (
+          {sportsEventData.map((d) => (
             <div key={d.title} className='bg-white h-[450px] text-black rounded-xl'>
               <div className='h-full bg-indigo-500 flex justify-center items-center rounded-xl mr-4'>
                 <img src={d.img} alt='' className='h-full w-full rounded-xl' />
@@ -42,4 +42,4 @@ function EventList() {
   );
 }
 
-export default EventList;
+export default EventList2;

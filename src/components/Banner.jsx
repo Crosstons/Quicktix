@@ -6,23 +6,23 @@ function Banner() {
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96 mt-[38px]">
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://img.freepik.com/free-vector/retro-style-cinema-background-with-stars-film-reel_1017-38831.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1701820800&semt=ais" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            <img src="https://img.freepik.com/free-vector/flat-summer-sale-horizontal-banner-template_23-2149384108.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698451200&semt=ais" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
 
         <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
-            <img src="https://img.freepik.com/premium-vector/movie-poster-cinema-banner-glowing-cinema-banner-vector-illustration_661273-100.jpg" className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/>
+            <img src="https://img.freepik.com/free-psd/horizontal-banner-template-ceo-master-event-conference_23-2148912632.jpg" className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/>
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            <img src="https://s.tmimgcdn.com/scr/1200x627/318400/business-conference-flyer-template-or-webinar-horizontal-event-banner_318449-original.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            <img src="https://img.freepik.com/free-vector/electronic-music-event-horizontal-banner-template_23-2149863698.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            <img src="https://img.freepik.com/free-psd/horizontal-banner-template-professional-business-event_23-2149313272.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
     </div>
 

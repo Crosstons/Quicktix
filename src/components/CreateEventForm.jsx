@@ -60,9 +60,18 @@ const CreateEventForm = ({ onCreateEvent }) => {
             className="w-full p-2 mb-4 border rounded-md"
             required
           />
+          {eventData.img && (
+            <div className="mb-4">
+              <img
+                src={eventData.img}
+                alt="Image Preview"
+                className="w-full h-full object-cover aspect-w-9 aspect-h-16 rounded-md"
+              />
+            </div>
+          )}
           <textarea
             name="review"
-            placeholder="Event Review"
+            placeholder="Event Description"
             value={eventData.review}
             onChange={handleChange}
             className="w-full p-2 mb-4 border rounded-md"
@@ -134,7 +143,7 @@ const CreateEventForm = ({ onCreateEvent }) => {
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <button
             type="submit"
-            className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
           >
             Create Event
           </button>
