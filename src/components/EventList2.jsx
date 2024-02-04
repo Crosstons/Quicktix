@@ -30,7 +30,7 @@ function EventList2() {
               <div className='py-4'>
                 <h3 className='text-xl font-semibold mb-2'>{d.title}</h3>
                 <h4 className='text-lg font-regular mb-2 text-gray-500'>{d.genre}</h4>
-                <Link to={`/event/${d.title}`} className='mt-4 bg-gray-100 text-gray-500 px-2 py-1 rounded-md text-sm'>
+                <Link to={`/event/2/${d.title}`} className='mt-4 bg-gray-100 text-gray-500 px-2 py-1 rounded-md text-sm'>
                   View Details
                 </Link>
               </div>

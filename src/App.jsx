@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event/:title" element={<EventDetails />} />
-          <Route path="/event/:title" element={<EventDetails2 />} />
+          <Route path="/event/2/:title" element={<EventDetails2 />} />
           <Route path="/create-event" element={<CreateEventForm/>} />
           <Route path="/your-bookings" element={<BookedTickets/>} />
           <Route path="/create" element={<CreateEventForm />} />

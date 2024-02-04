@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const CreateEventForm = ({ onCreateEvent }) => {
   const [eventData, setEventData] = useState({
     title: '',
+    symbol: '',
     img: '',
     review: '',
     length: '',
@@ -26,6 +27,7 @@ const CreateEventForm = ({ onCreateEvent }) => {
     // Reset the form after creating the event
     setEventData({
       title: '',
+      symbol: '',
       img: '',
       review: '',
       length: '',
@@ -51,6 +53,15 @@ const CreateEventForm = ({ onCreateEvent }) => {
             className="w-full p-2 mb-4 border rounded-md"
             required
           />
+            <input
+            type="text"
+            name="title"
+            placeholder="Event Symbol"
+            value={eventData.symbol}
+            onChange={handleChange}
+            className="w-full p-2 mb-4 border rounded-md"
+            required
+          />
           <input
             type="text"
             name="img"
@@ -60,28 +71,10 @@ const CreateEventForm = ({ onCreateEvent }) => {
             className="w-full p-2 mb-4 border rounded-md"
             required
           />
-          {eventData.img && (
-            <div className="mb-4">
-              <img
-                src={eventData.img}
-                alt="Image Preview"
-                className="w-full h-full object-cover aspect-w-9 aspect-h-16 rounded-md"
-              />
-            </div>
-          )}
           <textarea
             name="review"
             placeholder="Event Description"
             value={eventData.review}
-            onChange={handleChange}
-            className="w-full p-2 mb-4 border rounded-md"
-            required
-          />
-          <input
-            type="text"
-            name="length"
-            placeholder="Event Length"
-            value={eventData.length}
             onChange={handleChange}
             className="w-full p-2 mb-4 border rounded-md"
             required
@@ -104,7 +97,7 @@ const CreateEventForm = ({ onCreateEvent }) => {
             required
           />
           <input
-            type="text"
+            type="time"
             name="time"
             placeholder="Event Time"
             value={eventData.time}
@@ -123,18 +116,27 @@ const CreateEventForm = ({ onCreateEvent }) => {
           />
           <input
             type="text"
-            name="price"
-            placeholder="Event Price"
-            value={eventData.price}
+            name="location"
+            placeholder="Event Location"
+            value={eventData.location}
             onChange={handleChange}
             className="w-full p-2 mb-4 border rounded-md"
             required
           />
           <input
             type="text"
-            name="location"
-            placeholder="Event Location"
-            value={eventData.location}
+            name="length"
+            placeholder="Event Length"
+            value={eventData.length}
+            onChange={handleChange}
+            className="w-full p-2 mb-4 border rounded-md"
+            required
+          />
+          <input
+            type="text"
+            name="price"
+            placeholder="Event Price"
+            value={eventData.price}
             onChange={handleChange}
             className="w-full p-2 mb-4 border rounded-md"
             required
